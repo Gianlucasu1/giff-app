@@ -18,7 +18,7 @@ export const AddCategory = ({onNewCategory}) => {
 
     return (
     <form onSubmit={ addCat }>
-        <input className="input-add-cat"onChange={ handleChange } type="text" placeholder="Buscar Gif" value ={ inputValue }></input>
+        <input className="input-add-cat" onChange={ handleChange } type="text" placeholder="Buscar Gif" value ={ inputValue }></input>
         <button>Agregar Categoría</button>
     </form>)
 }

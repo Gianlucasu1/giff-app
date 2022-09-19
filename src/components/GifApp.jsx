@@ -1,11 +1,10 @@
 import {useState,useEffect} from "react"
-import {AddCategory} from "../components/AddCategory"
-import { GifGrid } from "./GifGrid";
+
+import {AddCategory,GifGrid} from "../components/index";
 
 
 export const GifApp = () => {
    
-    const [counter, setCounter] = useState(0);
     const [ categories, setCategories ] = useState(['one punch', 'dragon ball']);
     
     const onAddCategory = ( newCategorie ) => {
@@ -14,7 +13,7 @@ export const GifApp = () => {
         if (categoriesFiltred.length > 0) return;
 
         setCategories(prevCategorie => {
-            return [...prevCategorie, newCategorie]
+            return [newCategorie, ...prevCategorie]
         })
         
     }
